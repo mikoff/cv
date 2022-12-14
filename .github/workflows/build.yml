@@ -30,7 +30,7 @@ jobs:
       - name: Install texlive-xetex
         run: sudo apt-get install texlive-xetex
       - name: Build pdf
-        run: xelatex cv.tex -o cv.pdf
+        run: xelatex cv.tex -o aleksandr-mikov-cv.pdf
       - name: Create pull request
         uses: peter-evans/create-pull-request@v3
         with: 
