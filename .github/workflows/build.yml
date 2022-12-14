@@ -32,7 +32,7 @@ jobs:
       - name: Build pdf
         run: xelatex cv.tex -o cv.pdf
       - name: Create pull request
-        uses: mikoff/create-pull-request@v3
+        uses: peter-evans/create-pull-request@v3
         with: 
           commit-message: xelatex build
           branch: xelatex_build
