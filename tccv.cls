@@ -33,7 +33,7 @@
 \RequirePackage[hmargin=1.25cm,vmargin=1.6cm,twocolumn,columnsep=1.25cm]{geometry}
 \RequirePackage{bookman,etoolbox,hyperref,marvosym,needspace,tabularx,xcolor}
 \usepackage{enumitem}% http://ctan.org/pkg/enumitem
-\usepackage{fontawesome}
+\usepackage{fontawesome5}
 \usepackage{academicons}
 \setlist[itemize]{topsep=0pt,leftmargin=5.5mm}
 
@@ -108,7 +108,7 @@
 % \personal[optional: web site without scheme (no http:// prefix)]
 %          {address}{phone number}{email}
 % ]|
-\newcommand\personal[6][]{%
+\newcommand\personal[8][]{%
     \needspace{0.5\textheight}%
     \newdimen\boxwidth%
     \boxwidth=\dimexpr\linewidth-2\fboxsep\relax%
@@ -116,11 +116,12 @@
     \begin{tabularx}{\boxwidth}{c|X}
     \faMapMarker & {#2}\smallskip\\
     \faPhone    & {#3}\smallskip\\
-    \faEnvelopeO    & \href{mailto:#4}{#4}
-    \ifstrempty{#1}{}{\smallskip\\ \faLink & \href{http://#1}{#1}}
-    \ifstrempty{#5}{}{\smallskip\\ \faLinkedin & \href{http://#5}{#5}}
-    \ifstrempty{#6}{}{\smallskip\\ \faGithub & \href{http://#6}{#6}}
-%    \ifstrempty{#7}{}{\smallskip\\ \aiGoogleScholar & \href{http://#7}{#7}}
+    \ifstrempty{#4}{}{\faEnvelope & \href{mailto:#4}{#4}\smallskip\\}
+    \ifstrempty{#1}{}{\faLink & \href{http://#1}{#1}\smallskip\\}
+    \ifstrempty{#5}{}{\faLinkedin & \href{http://#5}{#5}\smallskip\\ }
+    \ifstrempty{#6}{}{\faGithub & \href{http://#6}{#6}\smallskip\\ }
+    \ifstrempty{#7}{}{\aiGoogleScholar & \href{http://#7}{scholar.google.com}\smallskip\\}
+    \ifstrempty{#8}{}{\faCheck & \today}
     \end{tabularx}}}
 
 % Every \item can be followed by one or more paragraphs

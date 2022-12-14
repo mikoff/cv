@@ -4,9 +4,10 @@
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 %\pagestyle{fancy}
-\usepackage{longtable}
+\usepackage{supertabular}
 \usepackage{enumitem}
-%\usepackage{fontawesome}
+\usepackage{fontawesome5}
+\usepackage{fontspec}
 \usepackage[T1]{fontenc}
 \usepackage[light,familydefault=true]{Chivo}
 \usepackage{textcomp}
@@ -34,54 +35,56 @@
 \renewcommand{\footrulewidth}{0.4pt}
 
 \definecolor{blue(ncs)}{rgb}{0.0, 0.53, 0.74}
+\definecolor{olivegreen}{rgb}{0.52, 0.52, 0.1}
+\definecolor{forestgreen}{rgb}{0.133, 0.545, 0.133}
 
 \begin{document}
 
-\aboutme{\center{PhD, Researcher and algorithm developer in the indoor and outdoor navigation field\\with an emphasis on automotive and pedestrian applications.}}
+\aboutme{\center{\textcolor{forestgreen}{\textbf{PhD}}, Researcher and algorithm developer in the indoor and outdoor navigation field\\with an emphasis on automotive and pedestrian applications.}}
 \part{Aleksandr Mikov}
+
 
 \section{Employment}
 
 \begin{eventlist}
-\event{2020 -- now}
-     {\textcolor{red}{H}uawei}
+\event{2022 -- now}
+     {\textcolor{red}{B}osch, XC/DX, Stuttgart}
      {Senior Researcher}
 \begin{itemize}
-     \item Worked on Intelligent Transport Systems problems: radar-camera calibration, pose estimation, tracking.
-     \item Developed unsupervised alignment algorithm for radar-camera pairs deployed at the intersection (patent pending).
+     \item Solved problems of map building \& vehicle positioning in GNSS-denied environment.
 \end{itemize}
 
-\begin{eventlist}
-
-\event{2018 -- 2020}
-     {\textcolor{red}{Y}andex, Moscow}
-     {Researcher \& Senior Software Developer}
+\event{2020 -- 2022}
+     {\textcolor{red}{H}uawei, St. Petersburg}
+     {Lead Researcher}
 \begin{itemize}
-    \item Implemented and integrated indoor Particle Filter based positioning algorithms for Yandex Maps
-    \item Developed Sensor Fusion of GNSS, Inertial and Odometer data for Yandex Drive car positioning using low-cost sensors. The Kalman filter consists of 17 states and is able to work robustly in GNSSs-denied and GNSS-spoofed environments (See \href{https://www.dropbox.com/s/jkawevakrhy58hc/LefortovskiyFast.mp4}{Video})
+     \item Worked on Intelligent Transport Systems problems: radar-camera calibration, pose estimation, multi-target tracking
+     \item Developed unsupervised alignment algorithm for radar-camera pairs deployed at the intersection
 \end{itemize}
 
 \event{2018 -- 2020}
-     {\textcolor{blue(ncs)}{N}avigine Inc., Skolkovo, Moscow}
+     {\textcolor{blue(ncs)}{N}avigine Inc. \& \textcolor{red}{Y}andex, Skolkovo \& Moscow}
      {Researcher \& Senior Software Developer}
 \begin{itemize}
     \item Developed Sensor Fusion of GNSS, Inertial and Visual Odometry data. The position error after 5 minutes of autonomous positioning didn't exceed 1\% of total travelled distance (See  \href{https://www.dropbox.com/s/kaij23xphdqjv5j/kalman_heading_correction_on.html?dl=1}{Example})
-    \item Worked on Tightly Coupled GNSS/INS Sensor Fusion toolbox, which is able to: obtain broadcasted or precise orbit information, estimate satellite positions and their clock biases, estimate ionospheric and tropospheric signal delays, calculate receiver position, apply motion constraints, use odometer data
-    \item Developed sensor fusion algorithms for automotive positioning using GPS, odometer and Analog Devices inertial sensors. Enabled the very fast and efficient cold start without GPS (See \href{https://www.dropbox.com/s/yjag8qm7ax6skoa/vehicle_positioning_demo.pptx}{Results})
-    \item Developed algorithms for automotive positioning in GPS-denied environment using CAN-data(steering wheel angle, odometer) and road information. Build Kalman filter for estimation of parameters for Ackermann vehicle model and applied map-matching techniques. With the proposed algorithms car is able to robustly estimate its position hours after GPS signal loss (See \href{https://www.dropbox.com/s/awil97l95az982h/AutotomotiveCanFusion.png}{Demo})
+    \item Worked on Tightly Coupled GNSS/INS Sensor Fusion toolbox
+    \item Developed sensor fusion algorithms for automotive positioning using GPS, odometer and Analog Devices inertial sensors. Enabled fast and efficient cold start without GPS (See \href{https://www.dropbox.com/s/yjag8qm7ax6skoa/vehicle_positioning_demo.pptx}{Results})
+    \item Developed algorithms for automotive positioning in GPS-denied environment using CAN-data(steering wheel angle, odometer) and road information. With the proposed algorithms car is able to robustly estimate its position hours after GPS signal loss (See \href{https://www.dropbox.com/s/awil97l95az982h/AutotomotiveCanFusion.png}{Demo})
     \item Accelerated the development of localization library  which fuses Bluetooth, WiFi, GPS and inertial measurements, strengthened it to provide even more robust navigation solution
-    \item Investigated Kalman and Particle Filters, fingerprinting and smoothing techniques
+    \item Implemented and integrated indoor Particle Filter based positioning algorithms for Yandex Maps
+    \item Developed Sensor Fusion solution of GNSS, Inertial and Odometer data for Yandex Drive car positioning using low-cost sensors. The solution able to work robustly in GNSSs-denied and GNSS-spoofed environments (See \href{https://www.dropbox.com/s/jkawevakrhy58hc/LefortovskiyFast.mp4}{Video})
 \end{itemize}
 
 \begin{figure}[t]
 \personal
     []
-    {Petrozavodsk \& Moscow\newline Russia}
-    {+49 176 695 30349}
-    {sasha.mikoff@gmail.com}
+    {Stuttgart, Germany}
+    {+49 176 557 30340}
+    {} %sasha.mikoff@gmail.com
     {linkedin.com/in/sasha-mikoff}
     {mikoff.github.io}
-%    {scholar.google.com/citations?user=skjYlgkAAAAJ}
+    {scholar.google.com/citations?user=skjYlgkAAAAJ}
+    {today}
 \end{figure}
 
 \event{2012 -- 2018}
@@ -102,6 +105,7 @@ held devices connected in wireless sensor network based on UWB/BLE with a focus 
     \item Tutored students on inertial navigation topics and prepared lab materials
 \end{itemize}
 
+\newpage
 \event{2011 -- 2012}
      {Budget Monitoring Center, Petrozavodsk}
      {Software developer}
@@ -137,6 +141,54 @@ held devices connected in wireless sensor network based on UWB/BLE with a focus 
       \newline 
       B.S. in Computer Engineering}
      {Petrozavodsk State University}
+
+\end{yearlist}
+
+\section{Courses}
+
+\begin{yearlist}
+
+\item[\href{https://www.dropbox.com/s/116ku7br2kqn5nr/doc00422820191224182244.pdf}{Certificate}]{2019}
+     {Algorithms for integrated inertial satellite navigation systems}
+     {Lomonosov Moscow State University, MSU}
+
+\item[\href{https://www.coursera.org/account/accomplishments/records/PJCQYC92YUSU}{Coursera Certificate}]{2017}
+     {Machine Learning: Statistics for data analysis}
+     {Moscow Institute of Physics and Technology \& Yandex}
+
+\item[\href{https://www.coursera.org/account/accomplishments/records/2MZW385H2Y2U}{Coursera Certificate}]{2016}
+     {Machine Learning: Unsupervised Learning}
+     {Moscow Institute of Physics and Technology \& Yandex}
+     
+\end{yearlist}
+\begin{yearlist}
+
+\item[\href{https://www.coursera.org/account/accomplishments/records/UFDJLATYB83T}{Coursera Certificate}]{2016}
+     {Machine Learning: Supervised Learning}
+     {Moscow Institute of Physics and Technology \& Yandex}
+
+\item[\href{https://www.coursera.org/account/accomplishments/records/PJCQYC92YUSU}{Coursera Certificate}]{2016}
+     {Math and Python for data analysis}
+     {Moscow Institute of Physics and Technology \& Yandex}
+
+\item[]{2016}
+     {Robotics: Aerial Robotics}
+     {University of Pennsylvania on Coursera}
+
+\item[]{2015}
+     {Digital Signal Processing}
+     {Faculty of Extension Courses, PetrSU}
+
+\item[]{2014}
+     {Fundamentals of business: information services}
+     {Faculty of Extension Courses, PetrSU}
+
+\end{yearlist}
+\begin{yearlist}
+
+\item[]{2013}
+     {Computer networks and communications}
+     {Faculty of Extension Courses, PetrSU}
 
 \end{yearlist}
 
@@ -179,84 +231,42 @@ in GPS-denied environment>> got a \$10000 grant}
      {Microsoft Student Partner in Petrozavodsk State University in 2011-2012}
 \end{yearlist}
 
-\section{Courses}
-
-\begin{yearlist}
-
-\item[\href{https://www.dropbox.com/s/116ku7br2kqn5nr/doc00422820191224182244.pdf}{Certificate}]{2019}
-     {Algorithms for integrated inertial satellite navigation systems}
-     {Lomonosov Moscow State University, MSU}
-
-\item[\href{https://www.coursera.org/account/accomplishments/records/PJCQYC92YUSU}{Coursera Certificate}]{2017}
-     {Machine Learning: Statistics for data analysis}
-     {Moscow Institute of Physics and Technology \& Yandex}
-
-\item[\href{https://www.coursera.org/account/accomplishments/records/2MZW385H2Y2U}{Coursera Certificate}]{2016}
-     {Machine Learning: Unsupervised Learning}
-     {Moscow Institute of Physics and Technology \& Yandex}
-     
-\item[\href{https://www.coursera.org/account/accomplishments/records/UFDJLATYB83T}{Coursera Certificate}]{2016}
-     {Machine Learning: Supervised Learning}
-     {Moscow Institute of Physics and Technology \& Yandex}
-
-\item[\href{https://www.coursera.org/account/accomplishments/records/PJCQYC92YUSU}{Coursera Certificate}]{2016}
-     {Math and Python for data analysis}
-     {Moscow Institute of Physics and Technology \& Yandex}
-
-\item[]{2016}
-     {Robotics: Aerial Robotics}
-     {University of Pennsylvania on Coursera}
-
-\item[]{2015}
-     {Digital Signal Processing}
-     {Faculty of Extension Courses, PetrSU}
-
-\item[]{2014}
-     {Fundamentals of business: information services}
-     {Faculty of Extension Courses, PetrSU}
-
-\end{yearlist}
-\begin{yearlist}
-
-\item[]{2013}
-     {Computer networks and communications}
-     {Faculty of Extension Courses, PetrSU}
-
-\end{yearlist}
-
+\newpage
+\onecolumn
 \section{Skills}
 
-\renewcommand{\arraystretch}{1.5}
-
 {\large{\textbf{Software development}}}
-\vspace{-1em}
-\begin{longtable}{ p{1.7cm} | p{15.5cm} }
-  Platform & Proficiency in Linux and its tools. Special exposure to real-time operating systems (FreeRTOS). Able to develop on Unix or Microsoft desktop systems. Solid background in embedded programming on low-powered microcontrollers (ARM Cortex based: STM32F4 and nRF51 families). \\
-  IDEs & Experience with Visual Studio Code, VIM.  \\
-  Compilers & GNU Compiler Collection, GNU Arm Embedded Toolchain.  \\
-  Hardware & CAN, I2C, I2S, SAI, SPI, DMA, inertial sensors, nanoLOC, BLE, UWB, Audio Codecs, SocketCAN\\
+\vspace{1em}
+
+\begin{supertabular}{ p{4.0cm} | p{12.5cm} }
+  Platforms & Proficiency in Linux and its tools. Special exposure to real-time operating systems (FreeRTOS). Able to develop on Unix or Microsoft desktop systems. Solid background in embedded programming on low-powered microcontrollers (ARM Cortex based: STM32F4 and nRF51 families). \\\hline
+  IDEs & Experience with Visual Studio Code, VIM.  \\\hline
+  Compilers & GNU Compiler Collection, GNU Arm Embedded Toolchain.  \\\hline
+  Hardware & CAN, I2C, I2S, SAI, SPI, DMA, inertial sensors, nanoLOC, BLE, UWB, Audio Codecs, SocketCAN\\\hline
   SCM & GIT, SVN. \\
-\end{longtable}
+\end{supertabular}
 
-
+\vspace{2em}
 {\large{\textbf{Programming Technologies}}}
-\vspace{-1em}
-\begin{longtable}{ p{1.7cm} | p{15.5cm} }
-  C/C++ & 7 years of experience. Good understanding of program flow, memory management and real-time systems behaviour. Solid knowledge of standard (STL) and scientific (Eigen) libraries. \\
-  Python & 6 years of experience. Used for research, algorithm development and verification. Gained the competence in Numpy, Scipy, Pandas and Scikit-Learn. A lot of experience with visualizations and data representation using Jupyter tools.  \\
-  Matlab & Good proficiency. Used before Python for various research problems.  \\
-  \LaTeX & Used for paper publishing, scientific reports and professional documentation. \\
-\end{longtable}
+\vspace{1em}
 
-% \newpage
+\begin{supertabular}{ p{4.0cm} | p{12.5cm} }
+  C/C++ & 8 years of experience. Good understanding of program flow, memory management and real-time systems behaviour. Solid knowledge of standard (STL) and scientific (Eigen) libraries. \\\hline
+  Python & 6 years of experience. Used for research, algorithm development and verification. Gained the competence in Numpy, Scipy, Pandas and Scikit-Learn. A lot of experience with visualizations and data representation using Jupyter tools.  \\\hline
+  Matlab & Good proficiency. Used before Python for various research problems.  \\\hline
+  \LaTeX & Used for paper publishing, scientific reports and professional documentation. \\
+\end{supertabular}
+
+\vspace{2em}
 {\large{\textbf{Sciencific knowledge}}}
-\vspace{-1em}
-\begin{longtable}{ p{1.7cm} | p{15.5cm} }
-  Computer science & Functional and object-oriented programming, data structures, algorithm design and its complexity estimation, Montecarlo simulations, software engineering, debugging and code profiling, subversioning \\
-  Machine learning & Classification, clusterization, linear regression, statistics, Particle Filters, Bayesian methods, probability theory, learning methods.  \\
-  Signal processing & Kalman filters, sensor calibration, smoothing, dimensionality reduction, sampling, numerical computing, linear algebra, least squares, minimization and maximization problems.  \\
-  Navigation systems & GPS, GLONASS, GALILEO, Inertial Sensors, odometers, motion constraints, Ackermann model, Map matching. \\
-\end{longtable}
+\vspace{1em}
+
+\begin{supertabular}{ p{4.0cm} | p{12.5cm} }
+  Computer science & Functional and object-oriented programming, data structures, algorithm design and its complexity estimation, Montecarlo simulations, software engineering, debugging and code profiling, subversioning \\\hline
+  Machine learning & Classification, clusterization, linear regression, statistics, Particle Filters, Bayesian methods, probability theory, learning methods.  \\\hline
+  Signal processing & Kalman filters, sensor calibration, smoothing, dimensionality reduction, sampling, numerical computing, linear algebra, least squares, minimization and maximization problems.  \\\hline
+  Navigation systems & GPS, GLONASS, GALILEO, Inertial Sensors, odometers, motion constraints, Ackermann model, Map matching, Factor Graphs. \\
+\end{supertabular}
 
 \section{Publications}
 Full list of publications is available \href{https://scholar.google.ru/citations?user=skjYlgkAAAAJ}{here}
