@@ -1,18 +1,22 @@
 \documentclass{tccv}
 \usepackage[english]{babel}
  %% Option 'familydefault' only if the base font of the document is to be sans serif
-\usepackage[T1]{fontenc}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
-\pagestyle{fancy}
+%\pagestyle{fancy}
 \usepackage{longtable}
 \usepackage{enumitem}
-\usepackage{fontawesome}
-\usepackage[familydefault=true,light]{Chivo}
+%\usepackage{fontawesome}
+\usepackage[T1]{fontenc}
+\usepackage[light,familydefault=true]{Chivo}
+\usepackage{textcomp}
+\usepackage{xcolor}
 
 
-\usepackage{geometry}
-\geometry{a4paper, bmargin=20mm}
+
+%\usepackage{geometry}
+% \geometry{a4paper, landscape, bmargin=20mm}
+%\geometry{a4paper, bmargin=20mm}
 
 \addtokomafont{subsection}{\centering\Large}
 \usepackage{xpatch}
@@ -33,14 +37,23 @@
 
 \begin{document}
 
-\aboutme{\center{Researcher and algorithm developer in the indoor and outdoor navigation field\\with an emphasis on automotive and pedestrian applications.}}
+\aboutme{\center{PhD, Researcher and algorithm developer in the indoor and outdoor navigation field\\with an emphasis on automotive and pedestrian applications.}}
 \part{Aleksandr Mikov}
 
 \section{Employment}
 
 \begin{eventlist}
+\event{2020 -- now}
+     {\textcolor{red}{H}uawei}
+     {Senior Researcher}
+\begin{itemize}
+     \item Worked on Intelligent Transport Systems problems: radar-camera calibration, pose estimation, tracking.
+     \item Developed unsupervised alignment algorithm for radar-camera pairs deployed at the intersection (patent pending).
+\end{itemize}
 
-\event{2018 -- now}
+\begin{eventlist}
+
+\event{2018 -- 2020}
      {\textcolor{red}{Y}andex, Moscow}
      {Researcher \& Senior Software Developer}
 \begin{itemize}
@@ -48,12 +61,12 @@
     \item Developed Sensor Fusion of GNSS, Inertial and Odometer data for Yandex Drive car positioning using low-cost sensors. The Kalman filter consists of 17 states and is able to work robustly in GNSSs-denied and GNSS-spoofed environments (See \href{https://www.dropbox.com/s/jkawevakrhy58hc/LefortovskiyFast.mp4}{Video})
 \end{itemize}
 
-\event{2017 -- now}
+\event{2018 -- 2020}
      {\textcolor{blue(ncs)}{N}avigine Inc., Skolkovo, Moscow}
      {Researcher \& Senior Software Developer}
 \begin{itemize}
     \item Developed Sensor Fusion of GNSS, Inertial and Visual Odometry data. The position error after 5 minutes of autonomous positioning didn't exceed 1\% of total travelled distance (See  \href{https://www.dropbox.com/s/kaij23xphdqjv5j/kalman_heading_correction_on.html?dl=1}{Example})
-    \item Published Open Source Tightly Coupled GNSS/INS Sensor Fusion toolbox (\href{https://github.com/Navigine/Navbox}{github}), which is able to: obtain broadcasted or precise orbit information, estimate satellite positions and their clock biases, estimate ionospheric and tropospheric signal delays, calculate receiver position, apply motion constraints, use odometer data
+    \item Worked on Tightly Coupled GNSS/INS Sensor Fusion toolbox, which is able to: obtain broadcasted or precise orbit information, estimate satellite positions and their clock biases, estimate ionospheric and tropospheric signal delays, calculate receiver position, apply motion constraints, use odometer data
     \item Developed sensor fusion algorithms for automotive positioning using GPS, odometer and Analog Devices inertial sensors. Enabled the very fast and efficient cold start without GPS (See \href{https://www.dropbox.com/s/yjag8qm7ax6skoa/vehicle_positioning_demo.pptx}{Results})
     \item Developed algorithms for automotive positioning in GPS-denied environment using CAN-data(steering wheel angle, odometer) and road information. Build Kalman filter for estimation of parameters for Ackermann vehicle model and applied map-matching techniques. With the proposed algorithms car is able to robustly estimate its position hours after GPS signal loss (See \href{https://www.dropbox.com/s/awil97l95az982h/AutotomotiveCanFusion.png}{Demo})
     \item Accelerated the development of localization library  which fuses Bluetooth, WiFi, GPS and inertial measurements, strengthened it to provide even more robust navigation solution
@@ -64,10 +77,11 @@
 \personal
     []
     {Petrozavodsk \& Moscow\newline Russia}
-    {+7 (906) 209-0009}
+    {+49 176 695 30349}
     {sasha.mikoff@gmail.com}
     {linkedin.com/in/sasha-mikoff}
-    {}
+    {mikoff.github.io}
+%    {scholar.google.com/citations?user=skjYlgkAAAAJ}
 \end{figure}
 
 \event{2012 -- 2018}
@@ -88,8 +102,6 @@ held devices connected in wireless sensor network based on UWB/BLE with a focus 
     \item Tutored students on inertial navigation topics and prepared lab materials
 \end{itemize}
 
-
-\newpage
 \event{2011 -- 2012}
      {Budget Monitoring Center, Petrozavodsk}
      {Software developer}
@@ -100,13 +112,15 @@ held devices connected in wireless sensor network based on UWB/BLE with a focus 
 
 \end{eventlist}
 
+% \newpage
 \section{Academic Career}
 
 \begin{yearlist}
 
-\item[Advisor: \href{http://lab127.karelia.ru/~alexmou/resume_alexmou_eng.pdf}{Alexey Moschevikin}]{Fall 2014 --}
-     {Ph.D in\newline Information Management Systems}
+\item[Advisor: \href{https://petrsu.ru/persons/322/voronov}{Roman Voronov}]{Dec. 2021}
+     {PhD \textnormal{in Mathematical Modeling, Numerical Methods and Software Engineering} \newline Thesis title: \textnormal{Automotive dead reckoning algorithms for vehicles using low-cost MEMS IMUs}}
      {Petrozavodsk State University}
+     
 
 \item[With honors \newline GPA: 5.0 \newline
       Advisor: \href{http://lab127.karelia.ru/~alexmou/resume_alexmou_eng.pdf}{Alexey Moschevikin} \newline
@@ -115,7 +129,8 @@ held devices connected in wireless sensor network based on UWB/BLE with a focus 
       \newline 
       M.S. in Computer Engineering}
      {Petrozavodsk State University}
-
+\end{yearlist}
+\begin{yearlist}
 \item[With honors \newline GPA: 4.77 \newline
       Advisor: \href{http://openbudgetrf.ru/sotrudnik-publications/4/}{Ilya Pennie}]{June 2011}
      {B.S. in Computer Science 
@@ -140,13 +155,13 @@ Competition>> (UMNIK)}
 development of inertial navigation system for pedestrians
 in GPS-denied environment>> got a \$10000 grant}
 
+\end{yearlist}
+
+\begin{yearlist}
 \item{2013}
      {First prize EvAAL-2013}
      {The RealTrac positioning system, which I contributed to, took the frist place in International competition <<Evaluating AAL Systems through Competitive Benchmarking, EvAAL-2013>>}
 
-\end{yearlist}
-
-\begin{yearlist}
 \item{2013}
      {DAAD Scholarship, Germany}
      {Research work at Offenburg University of Applied Sciences}
@@ -183,9 +198,6 @@ in GPS-denied environment>> got a \$10000 grant}
 \item[\href{https://www.coursera.org/account/accomplishments/records/UFDJLATYB83T}{Coursera Certificate}]{2016}
      {Machine Learning: Supervised Learning}
      {Moscow Institute of Physics and Technology \& Yandex}
-     
-\end{yearlist}
-\begin{yearlist}
 
 \item[\href{https://www.coursera.org/account/accomplishments/records/PJCQYC92YUSU}{Coursera Certificate}]{2016}
      {Math and Python for data analysis}
@@ -203,58 +215,48 @@ in GPS-denied environment>> got a \$10000 grant}
      {Fundamentals of business: information services}
      {Faculty of Extension Courses, PetrSU}
 
+\end{yearlist}
+\begin{yearlist}
+
 \item[]{2013}
      {Computer networks and communications}
      {Faculty of Extension Courses, PetrSU}
 
 \end{yearlist}
 
-\newpage
 \section{Skills}
 
 \renewcommand{\arraystretch}{1.5}
 
 {\large{\textbf{Software development}}}
-
-\hspace{0cm}
-
-\begin{tabular}{ p{1.7cm} | p{6cm} }
+\vspace{-1em}
+\begin{longtable}{ p{1.7cm} | p{15.5cm} }
   Platform & Proficiency in Linux and its tools. Special exposure to real-time operating systems (FreeRTOS). Able to develop on Unix or Microsoft desktop systems. Solid background in embedded programming on low-powered microcontrollers (ARM Cortex based: STM32F4 and nRF51 families). \\
   IDEs & Experience with Visual Studio Code, VIM.  \\
   Compilers & GNU Compiler Collection, GNU Arm Embedded Toolchain.  \\
   Hardware & CAN, I2C, I2S, SAI, SPI, DMA, inertial sensors, nanoLOC, BLE, UWB, Audio Codecs, SocketCAN\\
   SCM & GIT, SVN. \\
-\end{tabular}
+\end{longtable}
 
-\hspace{0cm}\newline
 
 {\large{\textbf{Programming Technologies}}}
-
-\hspace{0cm}
-
-\begin{tabular}{ p{1.7cm} | p{6cm} }
-  C/C++ & 5 years of experience. Good understanding of program flow, memory management and real-time systems behaviour. Solid knowledge of standard (STL) and scientific (Eigen) libraries. \\
-  Python & 5 years of experience. Used for research, algorithm development and verification. Gained the competence in Numpy, Scipy, Pandas and Scikit-Learn. A lot of experience with visualizations and data representation using Jupyter tools.  \\
-\end{tabular}
-
-\begin{tabular}{ p{1.7cm} | p{6cm} }
+\vspace{-1em}
+\begin{longtable}{ p{1.7cm} | p{15.5cm} }
+  C/C++ & 7 years of experience. Good understanding of program flow, memory management and real-time systems behaviour. Solid knowledge of standard (STL) and scientific (Eigen) libraries. \\
+  Python & 6 years of experience. Used for research, algorithm development and verification. Gained the competence in Numpy, Scipy, Pandas and Scikit-Learn. A lot of experience with visualizations and data representation using Jupyter tools.  \\
   Matlab & Good proficiency. Used before Python for various research problems.  \\
   \LaTeX & Used for paper publishing, scientific reports and professional documentation. \\
-\end{tabular}
+\end{longtable}
 
-\hspace{0cm}
-
-\newpage
+% \newpage
 {\large{\textbf{Sciencific knowledge}}}
-
-\hspace{0cm}
-
-\begin{tabular}{ p{1.7cm} | p{6cm} }
+\vspace{-1em}
+\begin{longtable}{ p{1.7cm} | p{15.5cm} }
   Computer science & Functional and object-oriented programming, data structures, algorithm design and its complexity estimation, Montecarlo simulations, software engineering, debugging and code profiling, subversioning \\
   Machine learning & Classification, clusterization, linear regression, statistics, Particle Filters, Bayesian methods, probability theory, learning methods.  \\
   Signal processing & Kalman filters, sensor calibration, smoothing, dimensionality reduction, sampling, numerical computing, linear algebra, least squares, minimization and maximization problems.  \\
   Navigation systems & GPS, GLONASS, GALILEO, Inertial Sensors, odometers, motion constraints, Ackermann model, Map matching. \\
-\end{tabular}
+\end{longtable}
 
 \section{Publications}
 Full list of publications is available \href{https://scholar.google.ru/citations?user=skjYlgkAAAAJ}{here}

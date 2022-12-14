@@ -34,6 +34,7 @@
 \RequirePackage{bookman,etoolbox,hyperref,marvosym,needspace,tabularx,xcolor}
 \usepackage{enumitem}% http://ctan.org/pkg/enumitem
 \usepackage{fontawesome}
+\usepackage{academicons}
 \setlist[itemize]{topsep=0pt,leftmargin=5.5mm}
 
 % Capitalize words of at least a minimum length (default to 3 chars).
@@ -119,6 +120,7 @@
     \ifstrempty{#1}{}{\smallskip\\ \faLink & \href{http://#1}{#1}}
     \ifstrempty{#5}{}{\smallskip\\ \faLinkedin & \href{http://#5}{#5}}
     \ifstrempty{#6}{}{\smallskip\\ \faGithub & \href{http://#6}{#6}}
+%    \ifstrempty{#7}{}{\smallskip\\ \aiGoogleScholar & \href{http://#7}{#7}}
     \end{tabularx}}}
 
 % Every \item can be followed by one or more paragraphs
